@@ -109,6 +109,10 @@ body {
   fill: currentColor;
 }
 
+.socials-item:not(:last-child) {
+  margin-right: 10px;
+}
+
 /*     ====================MAIN PAGE================    */
 
 .head {
@@ -237,7 +241,7 @@ body {
   color: var(--accent-color);
 }
 
-.hero-button {
+.page-button {
   min-width: 200px;
   padding: 10px 32px;
   border: none;
@@ -255,8 +259,8 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero-button:hover,
-.hero-button:focus {
+.page-button:hover,
+.page-button:focus {
   background-color: var(--hero-btn-hover);
 }
 
@@ -390,8 +394,8 @@ body {
 
 .team-icon {
   color: var(--icon-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icon:hover,
@@ -454,6 +458,10 @@ body {
   margin-right: 70px;
 }
 
+.socials {
+  margin-right: 90px;
+}
+
 .down.logo {
   margin-bottom: 20px;
   margin-right: 0;
@@ -485,7 +493,7 @@ body {
   margin-bottom: 9px;
 }
 
-.socials-invite {
+.footer-invite {
   margin-bottom: 20px;
 
   font-weight: bold;
@@ -507,8 +515,44 @@ body {
   background-color: var(--brand-color);
 }
 
-.socials-item:not(:last-child) {
-  margin-right: 10px;
+.footer-signup {
+  display: flex;
+  align-items: center;
+}
+
+.footer-label {
+  display: inline-block;
+  margin-right: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+.footer-label-line {
+  min-width: 358px;
+  height: 50px;
+  padding: 15px;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.footer-label-line::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: var(--common-spacing);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.signup-button {
+  display: flex;
+  align-items: center;
+}
+
+.signup-icon {
+  margin-left: 10px;
 }
 
 /*   ===============BACKDROP=============     */
@@ -535,6 +579,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 40px;
 
   background-color: var(--accent-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -645,7 +690,7 @@ body {
 
 .projects-img-desc {
   position: absolute;
-  top: 0;
+  top: 100%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -653,10 +698,9 @@ body {
   padding-right: 24px;
   padding-top: 63px;
   padding-bottom: 63px;
-  transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  font-weight: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.6;
   letter-spacing: var(--common-spacing);
@@ -666,7 +710,7 @@ body {
 
 .projects-link:hover .projects-img-desc,
 .projects-link:focus .projects-img-desc {
-  transform: translateY(0);
+  transform: translateY(-100%);
 }
 
 .projects-about {

@@ -484,6 +484,47 @@
             <use href="./image/sprite.svg#icon-close"></use>
           </svg>
         </button>
+
+        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+        <form>
+          <label class="modal-label">
+            <span class="modal-label-name">Имя</span>
+            <svg class="modal-label-icon" width="18" height="18">
+              <use href="./image/sprite.svg#icon-person"></use>
+            </svg>
+            <input class="modal-line" type="text" name="username" />
+          </label>
+          <label class="modal-label">
+            <span class="modal-label-name">Телефон</span>
+            <svg class="modal-label-icon" width="18" height="18">
+              <use href="./image/sprite.svg#icon-phone-modal"></use>
+            </svg>
+            <input class="modal-line" type="tel" name="tel" />
+          </label>
+          <label class="modal-label">
+            <span class="modal-label-name">Почта</span>
+            <svg class="modal-label-icon" width="18" height="18">
+              <use href="./image/sprite.svg#icon-mail-modal"></use>
+            </svg>
+            <input class="modal-line" type="email" name="email" />
+          </label>
+          <label class="modal-label modal-comment">
+            <span class="modal-label-name">Комментарий</span>
+            <textarea
+              class="modal-comment-area"
+              name="comment"
+              rows="7"
+              placeholder="Введите текст"
+            ></textarea>
+          </label>
+          <label class="modal-checkbox">
+            <input class="checkbox" type="checkbox" name="policy" value="agreed" />
+            <span class="checkbox-icon"></span>
+            <span class="checkbox-text"> Соглашаюсь с рассылкой и принимаю</span
+            ><a href="" class="modal-link">Условия договора</a>
+          </label>
+          <button class="page-button" type="submit">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

@@ -460,8 +460,8 @@
             </li>
           </ul>
         </div>
-        <div class="subscribe">
-          <p class="footer-invite">Подпишитесь на рассылку</p>
+        <div class="subscribe" role="group" aria-labelby="subscribe-news-form">
+          <p class="footer-invite" id="subscribe-news-form">Подпишитесь на рассылку</p>
           <form class="footer-signup" name="signup-form" autocomplete="on">
             <label class="footer-label">
               <input
@@ -484,15 +484,15 @@
     </footer>
 
     <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
+      <div class="modal" role="group" aria-labelby="order-window">
         <button type="button" class="modal-close" data-modal-close>
           <svg width="18" height="18">
             <use href="./image/sprite.svg#icon-close"></use>
           </svg>
         </button>
-
-        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
         <form name="order-form" autocomplete="on">
+          <p class="modal-title" id="order-window">Оставьте свои данные, мы вам перезвоним</p>
+
           <label class="modal-label">
             <span class="modal-label-name">Имя</span>
             <svg class="modal-label-icon" width="18" height="18">

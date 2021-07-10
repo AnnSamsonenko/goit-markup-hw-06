@@ -655,6 +655,11 @@ body {
   width: 448px;
   height: 40px;
   padding: 11px 42px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: var(--common-spacing);
+  color: var(--footer-bg-color);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -708,6 +713,21 @@ body {
 
 .checkbox-icon {
   display: inline-block;
+  margin-right: 8px;
+  border: 2px solid var(--text-color);
+  border-radius: 2px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked + .checkbox-icon {
+  background-color: var(--brand-color);
+  border-color: transparent;
+  transform: scale(1.1);
+}
+
+/* .checkbox-icon {
+  display: inline-block;
   width: 16px;
   height: 15px;
   margin-right: 8px;
@@ -723,7 +743,7 @@ body {
   background-color: var(--brand-color);
   border-color: transparent;
   transform: scale(1.1);
-}
+} */
 
 .checkbox-text,
 .modal-link {
